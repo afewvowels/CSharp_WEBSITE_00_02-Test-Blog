@@ -1,0 +1,199 @@
+﻿body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: rebeccapurple;
+  color: white; }
+
+body form {
+  height: 100%; }
+
+#main-body {
+  min-height: 100%;
+  display: grid;
+  grid-template: 'header' 70px 'content' 1fr 'footer' 55px / 100%;
+  font-family: english-grotesque, sans-serif;
+  font-weight: 300; }
+
+#main-header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  #main-header h1 {
+    margin-left: 15px;
+    font-weight: 700; }
+  #main-header #main-nav {
+    margin-right: 15px; }
+    #main-header #main-nav #main-nav-ul {
+      display: flex;
+      list-style: none; }
+      #main-header #main-nav #main-nav-ul .main-nav-li a, #main-header #main-nav #main-nav-ul .main-nav-li a:hover {
+        display: block;
+        text-decoration: none; }
+        #main-header #main-nav #main-nav-ul .main-nav-li a span, #main-header #main-nav #main-nav-ul .main-nav-li a:hover span {
+          position: relative;
+          padding: 10px;
+          color: white; }
+
+.body-content {
+  grid-area: content;
+  align-self: stretch;
+  justify-self: stretch; }
+
+#main-footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+/* Default.aspx page -----------*/
+#section-default-hero {
+  display: grid;
+  grid-template: '. . .' 2fr '. h .' 2fr '. p .' 2fr '. . .' 3fr / 1fr 1fr 1fr;
+  position: relative;
+  height: 350px;
+  object-fit: fill;
+  overflow: hidden;
+  background-color: white;
+  color: rebeccapurple; }
+  #section-default-hero h2 {
+    grid-area: h;
+    font-weight: 700;
+    align-self: flex-end;
+    justify-self: center;
+    font-size: 1.85em; }
+  #section-default-hero p {
+    grid-area: p;
+    align-self: flex-start;
+    justify-self: center;
+    text-indent: 1.0em;
+    font-size: 1.45em; }
+
+#section-default-tri {
+  margin: 55px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  #section-default-tri #tri-wrapper {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    #section-default-tri #tri-wrapper .tri-object {
+      width: 28%;
+      height: 450px;
+      background-color: white;
+      color: rebeccapurple;
+      padding: 35px;
+      margin: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column; }
+      #section-default-tri #tri-wrapper .tri-object i {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background-color: rebeccapurple;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5em; }
+      #section-default-tri #tri-wrapper .tri-object h3 {
+        font-size: 2.25em; }
+      #section-default-tri #tri-wrapper .tri-object hr {
+        width: 58%;
+        margin: 0px 0px 15px 0px;
+        color: rebeccapurple;
+        background-color: rebeccapurple;
+        height: 2px; }
+      #section-default-tri #tri-wrapper .tri-object p {
+        font-size: 1.3em;
+        text-indent: 1.0em; }
+
+#default-aside {
+  margin-bottom: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  #default-aside #aside-text-wrapper {
+    width: 900px;
+    padding: 40px;
+    background-color: white;
+    color: rebeccapurple; }
+    #default-aside #aside-text-wrapper p {
+      font-size: 1.3em; }
+
+/* Create post page -------------*/
+#create-form-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px; }
+  #create-form-wrapper #create-form-fieldset {
+    border: 2px solid white;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 45px; }
+    #create-form-wrapper #create-form-fieldset #inputs-wrapper {
+      width: 100%; }
+      #create-form-wrapper #create-form-fieldset #inputs-wrapper .input-item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%; }
+        #create-form-wrapper #create-form-fieldset #inputs-wrapper .input-item .label {
+          font-size: 1.5em;
+          margin: 0;
+          padding: 0; }
+        #create-form-wrapper #create-form-fieldset #inputs-wrapper .input-item .textbox {
+          min-width: 100%;
+          background-color: rebeccapurple;
+          color: white;
+          border: 2px solid white;
+          margin: 5px 0 10px 0; }
+    #create-form-wrapper #create-form-fieldset #buttons-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      min-width: 100%;
+      margin: 15px 0 0 0; }
+      #create-form-wrapper #create-form-fieldset #buttons-wrapper .form-button {
+        width: 100px;
+        height: 35px;
+        background-color: rebeccapurple;
+        color: white;
+        border: 2px solid white; }
+
+/* Blog posts page ---------------*/
+#blog-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; }
+  #blog-wrapper .blog-post-wrapper {
+    width: 500px;
+    height: 650px;
+    border: 2px solid white;
+    padding: 45px;
+    overflow: hidden;
+    margin: 25px; }
+    #blog-wrapper .blog-post-wrapper .image-wrapper {
+      object-fit: cover;
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden; }
+      #blog-wrapper .blog-post-wrapper .image-wrapper img {
+        width: 100%;
+        height: auto; }
